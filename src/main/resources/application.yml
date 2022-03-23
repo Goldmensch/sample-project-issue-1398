@@ -1,0 +1,22 @@
+micronaut:
+  application:
+    name: sample_project_issue_1398
+datasources:
+  default:
+    url: jdbc:postgresql://localhost:5432/sample_project
+    driverClassName: org.postgresql.Driver
+    username: Lilly
+    password: 'passy'
+    dialect: POSTGRES
+flyway:
+  datasources:
+    default:
+      enabled: true
+      locations:
+        - classpath:db/migrations
+      clean-schema: true
+netty:
+  default:
+    allocator:
+      max-order: 3
+
